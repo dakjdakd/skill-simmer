@@ -11,6 +11,7 @@ export function Navigation() {
     { href: "/interview/prepare", label: "开始面试", icon: BrainCircuit },
     { href: "/progress", label: "进步追踪", icon: TrendingUp },
     { href: "/history", label: "历史记录", icon: History },
+    { href: "/profile", label: "个人设置", icon: Settings },
   ];
 
   return (
@@ -45,10 +46,12 @@ export function Navigation() {
             })}
           </div>
 
-          <Button variant="outline" size="sm">
-            <Settings className="h-4 w-4 mr-2" />
-            设置
-          </Button>
+          <Link to="/profile">
+            <Button variant="outline" size="sm">
+              <Settings className="h-4 w-4 mr-2" />
+              设置
+            </Button>
+          </Link>
         </div>
       </div>
     </nav>
