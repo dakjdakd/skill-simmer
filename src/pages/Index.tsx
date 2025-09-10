@@ -14,6 +14,8 @@ import {
   Shield
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import heroBanner from "@/assets/hero-banner.jpg";
+import aiMascot from "@/assets/ai-interviewer-mascot.jpg";
 
 const Index = () => {
   const features = [
@@ -73,48 +75,73 @@ const Index = () => {
       
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-20">
-        <div className="text-center max-w-4xl mx-auto animate-fade-in">
-          <Badge variant="secondary" className="mb-6 text-sm px-4 py-2">
-            <Zap className="h-3 w-3 mr-1" />
-            AI驱动的面试练习平台
-          </Badge>
-          
-          <h1 className="text-5xl md:text-7xl font-bold bg-gradient-hero bg-clip-text text-transparent mb-8 leading-tight">
-            让AI助你<br />
-            <span className="text-primary">面试无忧</span>
-          </h1>
-          
-          <p className="text-xl text-muted-foreground mb-10 max-w-2xl mx-auto leading-relaxed">
-            通过智能AI面试官模拟真实面试场景，获得个性化反馈，提升面试技能，收获理想工作机会
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Link to="/dashboard">
-              <Button size="lg" className="bg-gradient-primary hover:scale-105 transition-transform px-8 py-4 text-lg">
-                立即开始练习
-                <ArrowRight className="h-5 w-5 ml-2" />
-              </Button>
-            </Link>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="text-left animate-fade-in">
+            <Badge variant="secondary" className="mb-6 text-sm px-4 py-2">
+              <Zap className="h-3 w-3 mr-1" />
+              AI驱动的面试练习平台
+            </Badge>
             
-            <Link to="/dashboard">
-              <Button variant="outline" size="lg" className="px-8 py-4 text-lg">
-                查看功能介绍
-              </Button>
-            </Link>
+            <h1 className="text-5xl md:text-6xl font-bold mb-8 leading-tight">
+              让AI助你<br />
+              <span className="bg-gradient-hero bg-clip-text text-transparent">面试无忧</span>
+            </h1>
+            
+            <p className="text-xl text-muted-foreground mb-10 leading-relaxed">
+              通过智能AI面试官模拟真实面试场景，获得个性化反馈，提升面试技能，收获理想工作机会
+            </p>
+            
+            <div className="flex flex-col sm:flex-row gap-4 mb-12">
+              <Link to="/dashboard">
+                <Button size="lg" className="bg-gradient-primary hover:scale-105 transition-transform px-8 py-4 text-lg">
+                  立即开始练习
+                  <ArrowRight className="h-5 w-5 ml-2" />
+                </Button>
+              </Link>
+              
+              <Link to="/auth">
+                <Button variant="outline" size="lg" className="px-8 py-4 text-lg">
+                  免费注册
+                </Button>
+              </Link>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+              {stats.map((stat, index) => (
+                <div key={stat.label} className="text-center animate-slide-up" style={{ animationDelay: `${index * 100}ms` }}>
+                  <div className="text-2xl md:text-3xl font-bold text-primary mb-1">
+                    {stat.number}
+                  </div>
+                  <div className="text-sm text-muted-foreground">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t border-border">
-            {stats.map((stat, index) => (
-              <div key={stat.label} className="text-center animate-slide-up" style={{ animationDelay: `${index * 100}ms` }}>
-                <div className="text-3xl md:text-4xl font-bold text-primary mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-sm text-muted-foreground">
-                  {stat.label}
-                </div>
+          {/* Hero Image */}
+          <div className="relative animate-slide-up" style={{ animationDelay: "200ms" }}>
+            <div className="relative rounded-2xl overflow-hidden shadow-large">
+              <img 
+                src={heroBanner} 
+                alt="AI面试练习平台" 
+                className="w-full h-auto"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
+            </div>
+            
+            {/* Floating Mascot */}
+            <div className="absolute -bottom-4 -left-4 animate-float">
+              <div className="w-24 h-24 rounded-full overflow-hidden border-4 border-white shadow-large bg-white">
+                <img 
+                  src={aiMascot} 
+                  alt="AI助手" 
+                  className="w-full h-full object-cover"
+                />
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
