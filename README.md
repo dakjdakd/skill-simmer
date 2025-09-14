@@ -1,73 +1,62 @@
-# Welcome to your Lovable project
+# Skill Simmer - AI 模拟面试平台
 
-## Project info
+Skill Simmer 是一个使用 AI 技术的模拟面试平台，旨在帮助用户提升面试技巧、积累实战经验。在这里，您可以根据真实的职位描述（JD）进行高度还原的模拟面试，并获得宝贵的反馈。
 
-**URL**: https://lovable.dev/projects/912ccac6-d49c-4944-8657-b395f9cd7aa7
+## ✨ 主要功能
 
-## How can I edit this code?
+*   **真实 JD 模拟**：您可以粘贴任意职位的描述，AI 会根据职位要求生成面试问题，提供高度定制化的模拟面试体验。
+*   **多种面试风格**：内置多种面试官风格，从友好亲切到严肃直接，帮助您适应不同的面试场景。
+*   **智能反馈报告**：面试结束后，AI 会从多个维度对您的表现进行分析，并生成详细的反馈报告，指出您的亮点和待改进之处。
+*   **进度追踪**：记录您的每一次面试历史和成长轨迹，通过数据分析，让您的进步一目了然。
+*   **成就系统**：通过游戏化的激励机制，解锁新的徽章和成就，让练习过程不再枯燥。
 
-There are several ways of editing your application.
+## 🚀 技术栈
 
-**Use Lovable**
+本前端项目基于以下技术构建：
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/912ccac6-d49c-4944-8657-b395f9cd7aa7) and start prompting.
+*   **Vite**: 极速的现代前端构建工具。
+*   **React**: 用于构建用户界面的 JavaScript 库。
+*   **TypeScript**: 为 JavaScript 添加了静态类型检查。
+*   **Tailwind CSS**: 一个功能类优先的 CSS 框架，用于快速构建自定义设计。
+*   **shadcn-ui**: 一套设计精美、可重用的 UI 组件库。
 
-Changes made via Lovable will be committed automatically to this repo.
+## 本地开发
 
-**Use your preferred IDE**
+如果您想在本地环境中运行或修改此项目，请按照以下步骤操作：
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+1.  **克隆仓库**
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+    ```bash
+    git clone https://github.com/dakjdakd/skill-simmer.git
+    ```
 
-Follow these steps:
+2.  **进入项目目录**
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+    ```bash
+    cd skill-simmer
+    ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+3.  **安装依赖**
 
-# Step 3: Install the necessary dependencies.
-npm i
+    ```bash
+    npm install
+    ```
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+4.  **启动开发服务器**
 
-**Edit a file directly in GitHub**
+    ```bash
+    npm run dev
+    ```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+    启动成功后，您可以在浏览器中访问 `http://localhost:8080` 查看项目。
 
-**Use GitHub Codespaces**
+## 📝 如何使用
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+1.  **准备面试**：在“AI 模拟面试”页面的“面试准备”部分，粘贴您感兴趣的职位描述（JD）。
+2.  **开始面试**：点击“开始面试”按钮，进入模拟面试环节。AI 面试官会根据您提供的 JD 提出相关问题。
+3.  **查看反馈**：面试结束后，系统会生成一份详细的反馈报告，帮助您复盘和总结。
+4.  **个性化设置**：在“个人主页”的“外观设置”中，您可以根据喜好选择**浅色**、**深色**或**自动**主题模式。
 
-## What technologies are used for this project?
+---
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/912ccac6-d49c-4944-8657-b395f9cd7aa7) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+希望这份文档能帮助您更好地了解和使用 Skill Simmer！
