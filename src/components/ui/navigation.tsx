@@ -46,12 +46,11 @@ export function Navigation() {
             })}
           </div>
 
-          <Link to="/profile">
-            <Button variant="outline" size="sm">
-              <Settings className="h-4 w-4 mr-2" />
-              设置
-            </Button>
-          </Link>
+          <div className="flex items-center space-x-2">
+            <span className="text-sm text-muted-foreground hidden md:block">
+              欢迎使用AI面试练习平台
+            </span>
+          </div>
         </div>
       </div>
     </nav>

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useTheme } from "next-themes";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -23,6 +24,7 @@ import {
 } from "lucide-react";
 
 export default function Profile() {
+  const { theme, setTheme } = useTheme();
   const [notifications, setNotifications] = useState({
     email: true,
     push: false,
@@ -274,19 +276,28 @@ export default function Profile() {
                 <div>
                   <Label className="text-sm font-medium">主题模式</Label>
                   <div className="grid grid-cols-3 gap-3 mt-2">
-                    <div className="p-3 rounded-lg border border-primary bg-primary/5 cursor-pointer">
+                    <div 
+                      className={`p-3 rounded-lg border ${theme === 'light' ? 'border-primary bg-primary/5' : 'border-border'} cursor-pointer hover:border-primary/50`}
+                      onClick={() => setTheme('light')}
+                    >
                       <div className="text-center">
                         <div className="w-8 h-8 rounded bg-gradient-primary mx-auto mb-2"></div>
                         <p className="text-xs font-medium">浅色</p>
                       </div>
                     </div>
-                    <div className="p-3 rounded-lg border border-border cursor-pointer hover:border-primary/50">
+                    <div 
+                      className={`p-3 rounded-lg border ${theme === 'dark' ? 'border-primary bg-primary/5' : 'border-border'} cursor-pointer hover:border-primary/50`}
+                      onClick={() => setTheme('dark')}
+                    >
                       <div className="text-center">
                         <div className="w-8 h-8 rounded bg-foreground mx-auto mb-2"></div>
                         <p className="text-xs font-medium">深色</p>
                       </div>
                     </div>
-                    <div className="p-3 rounded-lg border border-border cursor-pointer hover:border-primary/50">
+                    <div 
+                      className={`p-3 rounded-lg border ${theme === 'system' ? 'border-primary bg-primary/5' : 'border-border'} cursor-pointer hover:border-primary/50`}
+                      onClick={() => setTheme('system')}
+                    >
                       <div className="text-center">
                         <div className="w-8 h-8 rounded bg-gradient-to-br from-primary to-secondary mx-auto mb-2"></div>
                         <p className="text-xs font-medium">自动</p>
