@@ -38,7 +38,7 @@ class AIInterviewService {
 
   constructor() {
     // 使用智谱AI的API密钥
-    this.apiKey = 'a39b3c2caa4c20edfc35d5e8cd8a9bc5.ZTuD0GCrVaS9n9BE';
+    this.apiKey = import.meta.env.VITE_ZHIPU_API_KEY;
     this.provider = this.apiKey ? 'zhipu' : 'mock';
   }
 
